@@ -1,0 +1,72 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  --text: #f1f2fe;
+  --background: #010213;
+  --primary: #0a0ef5b3;
+  --secondary: #8e066c;
+  --accent: #ba0840;
+}
+
+.button-style {
+  @apply relative
+         z-10
+         py-2
+         px-9
+         rounded-[11px]
+         before:duration-[0.6s]
+         before:content-['']
+         before:absolute
+         before:w-0
+         before:h-full
+       before:bg-white
+         before:top-0
+         before:-left-8 
+         before:rounded-[50%]
+         before:z-[-1]
+            hover:before:left-[-15px]
+             hover:before:rounded-[11px] 
+             hover:before:w-full
+             hover:font-bold
+             
+         after:content-['']
+         after:absolute
+         after:w-0
+         after:h-full
+       after:bg-white
+         after:top-0
+         after:-right-8
+         after:rounded-[50%]
+         after:z-[-1]
+         after:duration-[0.6s]	
+            hover:after:right-[-15px] 
+            hover:after:rounded-[11px]
+          hover:text-black
+            hover:after:w-full;
+}
+
+.all-choice {
+  @apply grid
+   grid-cols-customiz
+   max-[767px]:grid-cols-1
+    max-[991px]:grid-cols-tab 
+    justify-items-center
+     gap-y-12 
+     max-[767px]:gap-y-8
+      gap-x-5 border
+       border-[#dcdcdc54]
+        rounded-lg 
+        py-16;
+}
+
+.gradient {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}

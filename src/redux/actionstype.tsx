@@ -1,0 +1,9 @@
+export const QUIZDATA = "QUIZDATA";
+export const QUESTIONINDEX = "QUESTIONINDEX ";
+export const USERANSWER = "USERANSWER";
+export const TIMER = "TIMER";
+export const COLLECTUSERANSWER = "COLLECTUSERANSWER";
+export const RESULT = "RESULT";
+export const QUIZSTART = "QUIZSTART";
+export const FINISHED = "FINISHED";
+export const RESET = "RESET";
