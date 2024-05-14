@@ -11,12 +11,7 @@ import {
 import data from "../../data/data.json";
 
 export type State = {
-  questions: {
-    question: string;
-    degree: number;
-    correct_choice: number;
-    choices: string[];
-  }[];
+  questions: any;
   questionindex: number;
   useranswer: null;
   questionTimer: number;
@@ -25,7 +20,12 @@ export type State = {
   startquiz: boolean;
   finished: boolean;
 };
-
+//  questions: {
+//     question: string;
+//     degree: number;
+//     correct_choice: number;
+//     choices: string[];
+//   }[];
 const intialstate = {
   questions: data.questions,
   questionindex: 0,

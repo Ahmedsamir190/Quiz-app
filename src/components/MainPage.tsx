@@ -121,7 +121,7 @@ export default function MainPage() {
           ></div>
           {/* display choices */}
           <div className=" all-choice text-black ">
-            {questions.choices.map((choice, index) => {
+            {questions.choices.map((choice: string, index: number) => {
               const UserChoice = index + 1 === useranswer;
               return (
                 <label
