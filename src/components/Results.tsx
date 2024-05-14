@@ -77,18 +77,20 @@ function Results() {
                   {`${index + 1} -   ${result.question}`}
                 </p>
                 <ul>
-                  {result.allchoices.map((choice, choiceIndex) => (
-                    <li
-                      key={choiceIndex}
-                      className={`mb-8 border border-white rounded-xl py-3 px-5 ${
-                        result.correctAnswer === choice
-                          ? "bg-green-500"
-                          : result.userAnswer === choice && "bg-red-500"
-                      }`}
-                    >
-                      {choice}
-                    </li>
-                  ))}
+                  {result.allchoices.map(
+                    (choice: string, choiceIndex: number) => (
+                      <li
+                        key={choiceIndex}
+                        className={`mb-8 border border-white rounded-xl py-3 px-5 ${
+                          result.correctAnswer === choice
+                            ? "bg-green-500"
+                            : result.userAnswer === choice && "bg-red-500"
+                        }`}
+                      >
+                        {choice}
+                      </li>
+                    )
+                  )}
                 </ul>
                 <p className="mb-8">{`Your Answer : ${result.userAnswer}`}</p>
               </div>

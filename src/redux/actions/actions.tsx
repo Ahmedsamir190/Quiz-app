@@ -23,7 +23,7 @@ export const CurrentQuestionIndex = (payload: number) => {
   };
 };
 
-export const UserAnswer = (payload: null) => {
+export const UserAnswer = (payload: null | string | number) => {
   return {
     type: USERANSWER,
     payload,
@@ -37,7 +37,7 @@ export const QuestionTimer = (payload: number) => {
   };
 };
 
-export const CollectUserAnswer = (payload: string) => {
+export const CollectUserAnswer = (payload: string | null) => {
   return {
     type: COLLECTUSERANSWER,
     payload,
